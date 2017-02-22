@@ -9,9 +9,6 @@
 import UIKit
 
 class AnotherDrawBoard: UIView {
-    let ScreenWidth:CGFloat = UIScreen.main.bounds.width;
-    let ScreenHeight:CGFloat = UIScreen.main.bounds.height;
-    
     var path = CGMutablePath() //当前画线的路径
     var color = UIColor() //当前画线的颜色
     var font_size = CGFloat() //当前画线的线宽
@@ -22,14 +19,14 @@ class AnotherDrawBoard: UIView {
     //初始化
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor.blue;
+        self.backgroundColor = UIColor.white;
         
-        //初始化线的颜色和宽度s
+        //初始化线条的颜色和宽度
         self.color = UIColor.black;
         self.font_size = 4;
     }
     
-    //不写下面的方法就报错
+    //不写下面这个方法就报错
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -54,8 +51,8 @@ class AnotherDrawBoard: UIView {
         //百分比转换
         let point_x:CGFloat = currentPoint.x;
         let point_y:CGFloat = currentPoint.y;
-        let point_dict:NSDictionary = ["x":100*point_x/self.ScreenWidth,
-                                       "y":100*point_y/self.ScreenHeight]
+        let point_dict:NSDictionary = ["x":100*point_x/mScreenWidth,
+                                       "y":100*point_y/mScreenHeight]
         //保存下这个点
         self.pointArray.add(point_dict);
     }
@@ -71,8 +68,8 @@ class AnotherDrawBoard: UIView {
         //百分比转换
         let point_x:CGFloat = currentPoint.x;
         let point_y:CGFloat = currentPoint.y;
-        let point_dict:NSDictionary = ["x":100*point_x/self.ScreenWidth,
-                                       "y":100*point_y/self.ScreenHeight]
+        let point_dict:NSDictionary = ["x":100*point_x/mScreenWidth,
+                                       "y":100*point_y/mScreenHeight]
         //保存下这个点
         self.pointArray.add(point_dict);
         

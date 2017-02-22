@@ -9,9 +9,6 @@
 import UIKit
 
 class DrawBoardView: UIView {
-    let ScreenWidth:CGFloat = UIScreen.main.bounds.width;
-    let ScreenHeight:CGFloat = UIScreen.main.bounds.height;
-    
     var path = UIBezierPath() //当前画线的路径
     var color = UIColor() //当前画线的颜色
     var font_size = CGFloat() //当前画线的线宽
@@ -53,8 +50,8 @@ class DrawBoardView: UIView {
         //百分比转换
         let point_x:CGFloat = self.currentPoint.x;
         let point_y:CGFloat = self.currentPoint.y;
-        let point_dict:NSDictionary = ["x":100*point_x/self.ScreenWidth,
-                                       "y":100*point_y/self.ScreenHeight]
+        let point_dict:NSDictionary = ["x":100*point_x/mScreenWidth,
+                                       "y":100*point_y/mScreenHeight]
         //保存下这个点
         self.pointArray.add(point_dict);
     }
@@ -70,8 +67,8 @@ class DrawBoardView: UIView {
         //百分比转换
         let point_x:CGFloat = self.currentPoint.x;
         let point_y:CGFloat = self.currentPoint.y;
-        let point_dict:NSDictionary = ["x":100*point_x/self.ScreenWidth,
-                                       "y":100*point_y/self.ScreenHeight]
+        let point_dict:NSDictionary = ["x":100*point_x/mScreenWidth,
+                                       "y":100*point_y/mScreenHeight]
         //保存下这个点
         self.pointArray.add(point_dict);
         
@@ -81,7 +78,7 @@ class DrawBoardView: UIView {
     //触摸结束
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         //上传保存的点
-//        NSLog("%@", self.pointArray);
+        NSLog("%@", self.pointArray);
     }
     
     //触摸取消
