@@ -16,11 +16,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.drawBoard = DrawBoardView(frame: CGRect(x:0, y:0, width:mScreenWidth, height:mScreenHeight));
-//        self.view.addSubview(self.drawBoard);
+        self.drawBoard = DrawBoardView(frame: CGRect(x:0, y:0, width:mScreenWidth, height:mScreenHeight));
+        self.view.addSubview(self.drawBoard);
         
-        self.anotherDrawBoard = AnotherDrawBoard(frame: CGRect(x:0, y:0, width:mScreenWidth, height:mScreenHeight));
-        self.view.addSubview(self.anotherDrawBoard);
+//        self.anotherDrawBoard = AnotherDrawBoard(frame: CGRect(x:0, y:0, width:mScreenWidth, height:mScreenHeight));
+//        self.view.addSubview(self.anotherDrawBoard);
     }
 
 }
