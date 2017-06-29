@@ -6,6 +6,10 @@
 //  Copyright © 2017年 Quan Wai.Inc. All rights reserved.
 //
 
+/**
+ 画板
+ */
+
 import UIKit
 
 class DrawBoardView: UIView {
