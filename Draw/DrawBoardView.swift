@@ -13,6 +13,8 @@
 import UIKit
 
 class DrawBoardView: UIView {
+    let count = CGFloat()
+    
     var path = UIBezierPath() //当前画线的路径
     var color = UIColor() //当前画线的颜色
     var font_size = CGFloat() //当前画线的线宽
